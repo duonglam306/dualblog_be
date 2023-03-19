@@ -111,7 +111,7 @@ const registerUser = asyncHandler(async (req, res) => {
         let activateToken = jwt.sign(
             { username, email, password },
             process.env.JWT_SECRET,
-            { expiresIn: "180000" }
+            { expiresIn: "300000" }
         );
         let transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
@@ -241,7 +241,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
         }
 
         let resetToken = jwt.sign({ email }, process.env.JWT_SECRET, {
-            expiresIn: "180000",
+            expiresIn: "300000",
         });
         let transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
