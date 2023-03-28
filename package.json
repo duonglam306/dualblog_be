@@ -6,8 +6,6 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "data:import": "node seeder.js",
-    "data:destroy": "node seeder.js -d",
     "build": "npm install"
   },
   "author": "",
