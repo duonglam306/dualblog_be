@@ -16,7 +16,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-    origin: ["http://localhost:3000","https://duonglt.internship.designveloper.com"],
+    origin: ["http://localhost:3000","https://dualblog-fe.vercel.app"],
     credentials: true,
 }))
   
