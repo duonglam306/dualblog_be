@@ -7,7 +7,8 @@
   "scripts": {
     "start": "nodemon server.js",
     "data:import": "node seeder.js",
-    "data:destroy": "node seeder.js -d"
+    "data:destroy": "node seeder.js -d",
+    "build": "npm install"
   },
   "author": "",
   "license": "ISC",
