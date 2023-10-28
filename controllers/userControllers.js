@@ -585,7 +585,10 @@ const getUnFollowList = asyncHandler(async (req, res) => {
     });
     const users = await User.find({
       _id: { $nin: [...user.followList, user._id] },
-    });
+    })
+      .limit(pageSize)
+      .skip(pageSize * (page - 1));
+
     res.json({
       users: users.map((item) => item.checkFollow(user)),
       page,
